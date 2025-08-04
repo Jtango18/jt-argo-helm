@@ -3,4 +3,4 @@ image:
 
 customMessage: "Good Chat from Kubernetes and ArgoCD!"
 
-nginx-port: 50968
+nodePort: 30968
