@@ -1,4 +1,4 @@
-mage:
+image:
   tag: "1.18"
 
 customMessage: "Good Chat from Kubernetes and ArgoCD!"
