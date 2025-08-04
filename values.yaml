@@ -2,3 +2,5 @@ image:
   tag: "1.18"
 
 customMessage: "Good Chat from Kubernetes and ArgoCD!"
+
+nginx-port: 50968
