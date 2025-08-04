@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-nginx-deployment
-  namespace: octopus-managed-app
+  namespace: helm-octopus-app
 spec:
   replicas: 1
   selector:
