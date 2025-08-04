@@ -1,6 +1,4 @@
-image:
+mage:
   tag: "1.18"
 
-customMessage: "Good Chat from Kubernetes and ArgoCD!"apiVersion: v2
-name: my-nginx-chart
-version: 0.1.0
+customMessage: "Good Chat from Kubernetes and ArgoCD!"
