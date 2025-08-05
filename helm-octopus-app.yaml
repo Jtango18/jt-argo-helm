@@ -9,17 +9,13 @@ spec:
     - repoURL: https://github.com/Jtango18/jt-argo-helm.git
       targetRevision: main
       path: "."
+      helm:
+        valueFiles:
+          - $values/jt-argo-helm/values.yaml
     - repoURL: https://github.com/Jtango18/jt-argo-helm-values.git
       targetRevision: main
-      path: jt-argo-helm
+      path: "."
       ref: values
-  source:
-    repoURL: https://github.com/Jtango18/jt-argo-helm.git
-    targetRevision: main
-    path: "."
-    helm:
-      valueFiles:
-        - $values/values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: helm-octopus-app
