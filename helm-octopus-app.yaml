@@ -5,13 +5,21 @@ metadata:
   namespace: argocd
 spec:
   project: default
+  sources:
+    - repoURL: https://github.com/Jtango18/jt-argo-helm.git
+      targetRevision: main
+      path: "."
+    - repoURL: https://github.com/Jtango18/jt-argo-helm-values.git
+      targetRevision: main
+      path: jt-argo-helm
+      ref: values
   source:
     repoURL: https://github.com/Jtango18/jt-argo-helm.git
     targetRevision: main
     path: "."
     helm:
       valueFiles:
-        - values.yaml
+        - $values/values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: helm-octopus-app
