@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: multi-helm-be
+  namespace: multi-helm-app-be
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: multi-be
+  template:
+    metadata:
+      labels:
+        app: multi-be
+    spec:
+      containers:
+      - name: backend-container
+        image: "{{ .Values.image.name}}:{{ .Values.image.tag }}"
+        ports:
+        - containerPort: 80
