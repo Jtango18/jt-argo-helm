@@ -16,5 +16,7 @@ spec:
       containers:
       - name: backend-container
         image: "{{ .Values.image.name }}:{{ .Values.image.tag }}"
+        command: ["/bin/sh"]
+        args: ["-c", "while true; do sleep 30; done"]
         ports:
         - containerPort: 80
