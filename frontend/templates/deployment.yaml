@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: multi-helm-fe
-  namespace: multi-helm-app-fe
+  namespace: multi-service-app
 spec:
   replicas: 1
   selector:
